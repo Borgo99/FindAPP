@@ -12,7 +12,7 @@
         setTimeout(function() {
 
             DOMs.window1.style.opacity = "0";
-            DOMs.body.style.overflow = "auto";
+            //DOMs.body.style.overflow = "auto";
             setTimeout(function() {
                 DOMs.window1.style.display = "none";
                 DOMs.window2.style.display = "flex";

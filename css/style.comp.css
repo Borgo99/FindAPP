@@ -72,6 +72,7 @@
       flex-direction: column;
       align-items: flex-start;
       flex-basis: 35%;
+      z-index: 100;
       overflow-y: scroll;
       overflow-x: hidden; }
       .window2 .box-categories-left::-webkit-scrollbar, .window2 .box-categories-right::-webkit-scrollbar {
