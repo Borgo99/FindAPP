@@ -111,8 +111,9 @@
       font-family: "Bebas Neue", cursive;
       font-size: 2rem;
       color: #dae9f4;
-      padding: .5rem 2.5rem;
-      font-size: 2.5rem; }
+      font-size: 2.5rem;
+      width: 100%;
+      text-align: center; }
   .window2 .hand_icon {
     position: absolute;
     z-index: 1000;
