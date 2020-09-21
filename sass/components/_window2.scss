@@ -88,13 +88,14 @@
         z-index: 1000;
         width: 6rem;
         top: 15%;
-        left: 35%;
+        //left: 32%;
+        left: 12.5rem;
         transform: rotate(-75deg);
 
         animation-name: hand-motion;
         animation-duration: 1s;
-        animation-delay: 1s;
-        animation-fill-mode: forwards;
+        animation-delay: 0s;
+        //animation-fill-mode: forwards;
         animation-iteration-count: infinite;
         animation-direction: alternate-reverse;
     }
