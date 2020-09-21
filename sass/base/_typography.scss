@@ -3,3 +3,9 @@ $font-title: 'Permanent Marker', cursive;
 
 // font-family: 'Bebas Neue', cursive;
 $font1: 'Bebas Neue', cursive; 
+
+@mixin subtitle {
+    font-family: $font1;
+    font-size: 2rem;
+    color: $color-white1;
+}

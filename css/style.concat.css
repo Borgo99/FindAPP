@@ -1,3 +1,9 @@
+@keyframes hand-motion {
+  0% {
+    transform: rotate(-75deg); }
+  100% {
+    transform: rotate(-45deg); } }
+
 .button {
   font-family: "Bebas Neue", cursive;
   font-size: 2.8rem;
@@ -66,12 +72,14 @@
     justify-content: space-between;
     padding-top: 10%;
     padding-bottom: 10%; }
+    .window2 .box-categories .column {
+      display: flex;
+      flex-direction: column; }
     .window2 .box-categories-left, .window2 .box-categories-right {
       height: 100%;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      flex-basis: 35%;
       z-index: 100;
       overflow-y: scroll;
       overflow-x: hidden; }
@@ -99,6 +107,25 @@
     .window2 .box-categories-right label {
       text-align: left;
       transform: translateX(1rem); }
+    .window2 .box-categories__title {
+      font-family: "Bebas Neue", cursive;
+      font-size: 2rem;
+      color: #dae9f4;
+      padding: .5rem 2.5rem;
+      font-size: 2.5rem; }
+  .window2 .hand_icon {
+    position: absolute;
+    z-index: 1000;
+    width: 6rem;
+    top: 15%;
+    left: 35%;
+    transform: rotate(-75deg);
+    animation-name: hand-motion;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse; }
 
 *,
 *::after,
