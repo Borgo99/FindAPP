@@ -9,7 +9,8 @@
         hand_icon: document.querySelector(".hand_icon"),
         btn1: document.querySelector("#start-button"),
         btn2: document.querySelector("#search-button"),
-        module_active: document.querySelector("#module-active")
+        module_active: document.querySelector("#module-active"),
+        module_inactive: document.querySelector("#module-inactive")
     }
 
     //main page button click event
@@ -47,6 +48,7 @@
 
         }, 800);
 
+        setModuleEvents();
     })
 
     //manage of hand icon display
@@ -67,11 +69,19 @@
         drag: function() {
             DOMs.module_active.removeEventListener("touchend", module_functions.touchLeft, false);
             DOMs.module_active.style.transform = "scale(.9) translateX(-120vw)";
+            setTimeout(function() {
+                DOMs.module_active.id = "module-dragged";
+                DOMs.module_inactive.id = "module-active";
+                DOMs.module_active = document.querySelector("#module-active");
+                setModuleEvents();
+            }, 1200);
         }
     }
-    DOMs.module_active.addEventListener("touchstart", module_functions.simpleTouch, false);
-    DOMs.module_active.addEventListener("touchend", module_functions.touchLeft, false);
-    DOMs.module_active.addEventListener("touchmove", module_functions.drag, false);
+    var setModuleEvents = function() {
+        DOMs.module_active.addEventListener("touchstart", module_functions.simpleTouch, false);
+        DOMs.module_active.addEventListener("touchend", module_functions.touchLeft, false);
+        DOMs.module_active.addEventListener("touchmove", module_functions.drag, false);
+    }
 
 
 

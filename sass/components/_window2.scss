@@ -24,6 +24,7 @@
 
         &-left, &-right {
 
+            max-width: 44vw;
             height: 100%;
             display: flex;
             flex-direction: column;
@@ -87,7 +88,7 @@
         position: absolute;
         z-index: 1000;
         width: 6rem;
-        top: 15%;
+        top: 18%;
         left: 14rem;
         transform: rotate(5deg);
         color: $color-white1;

@@ -5,6 +5,8 @@
     height: 100%;
     width: 100%;
 
+    transition: all .4s;
+
     align-items: center;
     justify-content: center;
 
@@ -24,6 +26,7 @@
         border-radius: 10px;
 
         transition: all .5s;
+        //backface-visibility: hidden;
 
         .app {
 
@@ -80,6 +83,15 @@
 
         }
 
+    }
+
+    #module-inactive {
+        transform: translateX(120vw);
+        position: absolute;
+    }
+
+    #module-dragged {
+        display: none;
     }
 
 }
