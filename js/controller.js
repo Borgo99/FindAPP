@@ -74,7 +74,7 @@
                 DOMs.module_inactive.id = "module-active";
                 DOMs.module_active = document.querySelector("#module-active");
                 setModuleEvents();
-            }, 1200);
+            }, 800);
         }
     }
     var setModuleEvents = function() {
