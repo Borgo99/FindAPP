@@ -88,15 +88,17 @@
         z-index: 1000;
         width: 6rem;
         top: 15%;
-        //left: 32%;
-        left: 12.5rem;
-        transform: rotate(-75deg);
+        left: 14rem;
+        transform: rotate(5deg);
+        color: $color-white1;
+        font-size: 5rem;
 
         animation-name: hand-motion;
-        animation-duration: 1s;
+        animation-duration: 4s;
         animation-delay: 0s;
         //animation-fill-mode: forwards;
         animation-iteration-count: infinite;
-        animation-direction: alternate-reverse;
+        //animation-direction: alternate-reverse;
+        //animation-timing-function: ease-in-out;
     }
 }
