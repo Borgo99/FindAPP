@@ -167,8 +167,10 @@
       font-size: 3.2rem;
       text-align: center;
       padding-bottom: 2rem; }
+    .window3 .module .app a {
+      text-align: center; }
     .window3 .module .app__logo {
-      width: 28%;
+      width: 8.4rem;
       height: auto;
       border-radius: 25px;
       margin-bottom: 3rem; }
@@ -194,7 +196,8 @@
       .window3 .module .app-pros-cons .red {
         color: orangered; }
     .window3 .module .app-pros, .window3 .module .app-cons {
-      list-style: none; }
+      list-style: none;
+      max-width: 50%; }
       .window3 .module .app-pros__item, .window3 .module .app-cons__item {
         font-family: "Bebas Neue", cursive;
         font-size: 2rem;
