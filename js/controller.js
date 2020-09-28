@@ -3,7 +3,7 @@
     var categories = {
         "auto e moto": ["compra vendita", "app utili", "altro"],
         "bambini": ["salute", "app da colorare", "giochi", "scuola", "altro"],
-        "calcio": "calcio",
+        "calcio": ["news", "risultati in diretta", "statistiche", "fantacalcio", "giochi"],
         "cibo": {
             "domicilio": "a domicilio",
             "ricette": ["vegan", "veggie", "per celiaci"],
@@ -96,7 +96,7 @@
                         var index = this.id.substring(6);
                         var array = Object.entries(categories)[index][1];
                         if(this.checked) {
-                            var html_code = '<input type="checkbox" name="param-' + 1000 + '" id="param-' + 1000 + '" checked><label for="param-' + 1000 + '">' + this.nextSibling.textContent + '</label>';
+                            var html_code = '<input type="checkbox" name="param-' + 1000 + '" id="param-' + 1000 + '" checked><label style="background-color: #b32400" for="param-' + 1000 + '">' + this.nextSibling.textContent + '</label>';
                             for(var i=0; i<array.length; i++) {
                                 html_code += '<input type="checkbox" name="param-' + i + '" id="param-' + i + '"><label for="param-' + i + '">' + array[i] + '</label>';
                             }
