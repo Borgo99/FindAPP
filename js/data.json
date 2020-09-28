@@ -1,0 +1,27 @@
+{
+    "auto e moto": ["compra vendita", "app utili", "altro"],
+    "bambini": ["salute", "app da colorare", "giochi", "scuola", "altro"],
+    "cibo": {
+        "domicilio": "a domicilio",
+        "ricette": ["vegan", "veggie", "per celiaci"],
+        "ristorazione": "ristorazione"
+    },
+    "cultura": ["libri", "teatro", "concerti", "altro"],
+    "economia": {
+        "economia": "economia",
+        "finanza": "finanza e borsa",
+        "notizie": "notizie"
+    },
+    "fotografia": "fotografia",
+    "grafica e design": "grafica e design",
+    "giochi": ["arcade", "avventura", "trivia", "calcio", "macchine", "guerra", "altro"],
+    "informazione": "news",
+    "intrattenimento": ["radio", "riproduzione musicale", "riproduzione video"],
+    "meteo": "meteo",
+    "musica": ["streaming", "strumenti", "tutorial", "karaoke", "testi e spartiti", "altro"],
+    "salute": ["alimentazione", "salute", "medicina", "altro"],
+    "sport": ["basket", "caccia", "calcio", "fantacalcio", "fitness", "pesca", "palestra", "altri sport"],
+    "utility": ["calcolatori", "traduttori", "note", "calendari", "registratori", "scanner", "gestione file", "altro"],
+    "viaggi": ["aerei", "mappe", "treni", "vacanze", "guide", "altro"],
+    "altro": "altro"
+}

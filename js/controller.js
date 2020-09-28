@@ -1,5 +1,30 @@
 (function() {
 
+    var categories = {
+        "auto e moto": ["compra vendita", "app utili", "altro"],
+        "bambini": ["salute", "app da colorare", "giochi", "scuola", "altro"],
+        "calcio": "calcio",
+        "cibo": {
+            "domicilio": "a domicilio",
+            "ricette": ["vegan", "veggie", "per celiaci"],
+            "ristorazione": "ristorazione"
+        },
+        "cultura": ["libri", "teatro", "concerti", "altro"],
+        "economia": ["economia", "finanza e borsa", "notizie"],
+        "fotografia": "fotografia",
+        "grafica e design": "grafica e design",
+        "giochi": ["arcade", "avventura", "trivia", "calcio", "macchine", "guerra", "altro"],
+        "informazione": "news",
+        "intrattenimento": ["radio", "riproduzione musicale", "riproduzione video"],
+        "meteo": "meteo",
+        "musica": ["streaming", "strumenti", "tutorial", "karaoke", "testi e spartiti", "altro"],
+        "salute": ["alimentazione", "salute", "medicina", "altro"],
+        "sport": ["basket", "caccia", "calcio", "fantacalcio", "fitness", "pesca", "palestra", "altri sport"],
+        "utility": ["calcolatori", "traduttori", "note", "calendari", "registratori", "scanner", "gestione file", "altro"],
+        "viaggi": ["aerei", "mappe", "treni", "vacanze", "guide", "altro"],
+        "altro": "altro"
+    }
+
     var DOMs = {
         body: document.querySelector("body"),
         window1: document.querySelector(".window1"),
@@ -30,7 +55,66 @@
 
         }, 800);
 
-    })
+    });
+
+    //load categories in window2
+    var loadCategories = function() {
+        var data = Object.entries(categories);
+        var index = 0;
+        var name;
+        var html_code = "";
+        while(index < data.length) {
+            name = data[index][0];
+            html_code += '<input type="checkbox" name="param-' + index + '" id="param-' + index + '"><label for="param-' + index + '">' + name + '</label>';
+            index++;
+        }
+        //console.log(html_code);
+        return html_code;
+    };
+    const categories_html = loadCategories();
+    DOMs.box_cat_left.innerHTML = categories_html;
+    //add checkbox event
+    (function() {
+        var data = Object.entries(categories);
+
+        function setCheckboxesEvent(data) {
+
+            //setto evento della macrocategoria (se è già stata selezionata in precedenza)
+            var macroCat = document.querySelector("#param-1000");
+            if(macroCat != null) {
+                macroCat.addEventListener("click", function() {
+                    DOMs.box_cat_left.innerHTML = categories_html;
+                    setCheckboxesEvent(Object.entries(categories));
+                }) 
+            }
+
+            var index = 0;
+            while(index < data.length) {
+                //se ha delle sottocategorie
+                if(Array.isArray(data[index][1])) {
+                    document.querySelector("#param-" + index).addEventListener("click", function() {
+                        var index = this.id.substring(6);
+                        var array = Object.entries(categories)[index][1];
+                        if(this.checked) {
+                            var html_code = '<input type="checkbox" name="param-' + 1000 + '" id="param-' + 1000 + '" checked><label for="param-' + 1000 + '">' + this.nextSibling.textContent + '</label>';
+                            for(var i=0; i<array.length; i++) {
+                                html_code += '<input type="checkbox" name="param-' + i + '" id="param-' + i + '"><label for="param-' + i + '">' + array[i] + '</label>';
+                            }
+                            DOMs.box_cat_left.innerHTML = html_code;
+                            DOMs.box_cat_left.scroll(0, 0);
+                            setCheckboxesEvent(array);
+                        }
+                    });
+                } 
+                //se non ha delle sottocategorie
+                //...
+                index++;
+            }; 
+        }
+
+        setCheckboxesEvent(data);
+        
+    })();
 
     //search button event
     DOMs.btn2.addEventListener("click", function(){

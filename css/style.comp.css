@@ -81,6 +81,7 @@
       flex-direction: column; }
     .window2 .box-categories-left, .window2 .box-categories-right {
       max-width: 44vw;
+      min-width: 35vw;
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -110,8 +111,13 @@
     .window2 .box-categories-right input:checked + label {
       transform: translateX(0.5rem); }
     .window2 .box-categories-right label {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
       text-align: left;
       transform: translateX(1rem); }
+    .window2 .box-categories-left label {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0; }
     .window2 .box-categories__title {
       font-family: "Bebas Neue", cursive;
       font-size: 2rem;

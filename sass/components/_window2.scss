@@ -25,6 +25,7 @@
         &-left, &-right {
 
             max-width: 44vw;
+            min-width: 35vw;
             height: 100%;
             display: flex;
             flex-direction: column;
@@ -70,10 +71,17 @@
                 }
             }
             label {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
                 text-align: left;
                 transform: translateX(1rem);
             }
 
+        }
+
+        &-left label {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
         }
 
         &__title {
